@@ -40,8 +40,8 @@ export const TextGenerateEffect = ({
               key={word + idx}
               className={clsx(
                 "opacity-0",
-                idx > 1 && "text-purple",
-                idx <= 1 && "text-white",
+                idx > 2 && "text-purple",
+                idx <= 2 && "text-white",
               )}
               style={{
                 filter: filter ? "blur(10px)" : "none",
