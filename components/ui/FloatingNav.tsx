@@ -25,18 +25,13 @@ export const FloatingNav = ({
   const [visible, setVisible] = useState(false);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
-    // Check if current is not undefined and is a number
     if (typeof current === "number") {
       let direction = current! - scrollYProgress.getPrevious()!;
 
-      if (scrollYProgress.get() < 0.05) {
-        setVisible(false);
+      if (direction < 0) {
+        setVisible(true);
       } else {
-        if (direction < 0) {
-          setVisible(true);
-        } else {
-          setVisible(false);
-        }
+        setVisible(false);
       }
     }
   });
@@ -68,8 +63,8 @@ export const FloatingNav = ({
               "relative flex items-center space-x-1 text-neutral-600 hover:text-neutral-500 dark:text-neutral-50 dark:hover:text-neutral-300",
             )}
           >
-            <span className="block sm:hidden">{navItem.icon}</span>
-            <span className="hidden text-sm sm:block">{navItem.name}</span>
+            <span className="block">{navItem.icon}</span>
+            <span className="!cursor-pointer text-sm">{navItem.name}</span>
           </Link>
         ))}
       </motion.div>
