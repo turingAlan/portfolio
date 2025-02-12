@@ -1,0 +1,15 @@
+[
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.sellersetu.boho",
+            "sha256_cert_fingerprints": [
+                "C0:E9:3B:0D:5D:86:FB:E0:BB:90:4A:42:49:6F:70:79:0E:8F:ED:8A:5F:ED:78:AC:54:3D:53:B5:B3:98:18:BE",
+                "85:F0:CC:BF:04:99:64:E9:14:05:35:1D:00:25:3E:52:50:40:CC:BA:AF:D5:AB:C8:45:8F:3F:35:0C:F7:A8:84"
+            ]
+        }
+    }
+]
